@@ -22,4 +22,19 @@ public static class BtlExtensions
         }
         return SearchNodes(renderedFragment.Nodes)?.ParentElement;
     }
+
+    public static IElement[] FindAllByText(this IRenderedFragment renderedFragment, string text)
+    {
+        var matchedElements = new List<IElement>();
+        void SearchNodes (INodeList nodeList)
+        {
+            foreach (var node in nodeList)
+            {
+                if (node.HasChildNodes) SearchNodes(node.ChildNodes);
+                if (node.TextContent == text && node.ParentElement != null) matchedElements.Add(node.ParentElement); 
+            }
+        }
+        SearchNodes(renderedFragment.Nodes);
+        return matchedElements.ToArray();
+    }
 }
