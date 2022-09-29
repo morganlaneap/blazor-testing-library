@@ -1,0 +1,48 @@
+@page "/exampleform"
+@using System.ComponentModel.DataAnnotations
+
+<h3>ExampleForm</h3>
+
+<p>Enter some details</p>
+
+<EditForm Model="_formData" OnValidSubmit="OnValidSubmit">
+     <DataAnnotationsValidator />
+     <ValidationSummary />
+     
+    <label for="Forename">Forename:</label>
+    <InputText class="form-control" id="Forename" @bind-Value="_formData.Forename"/>
+
+    <label for="Surname">Surname:</label>
+    <InputText class="form-control" id="Surname" @bind-Value="_formData.Surname" />
+
+    <label for="EmailAddress">Email Address:</label>
+    <InputText class="form-control" id="EmailAddress" @bind-Value="_formData.EmailAddress" />
+
+    <button class="btn btn-primary" type="submit">Submit</button>
+</EditForm>
+
+<p>Your form is @FormStatus</p>
+
+@code {
+    class FormModel
+    {
+        [Required]
+        public string Forename { get; set; }
+
+        [Required]
+        public string Surname { get; set; }
+        
+        [Required]
+        [EmailAddress]
+        public string EmailAddress { get; set; }
+    }
+
+    readonly FormModel _formData = new();
+
+    public string FormStatus = "Not Submitted";
+
+    void OnValidSubmit()
+    {
+        FormStatus = "Submitted";
+    }
+}

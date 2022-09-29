@@ -1,0 +1,22 @@
+﻿@page "/counter"
+
+<h1>Counter</h1>
+
+<p class="@(_currentCount % 2 == 0 ? "is-even" : "is-odd")">Current count: @_currentCount</p>
+
+<button testId="incrementButton" class="btn btn-primary" @onclick="IncrementCount">Increase count</button>
+<button testId="resetButton" class="btn btn-primary" @onclick="ResetCount">Reset count</button>
+
+@code {
+    private int _currentCount;
+
+    private void IncrementCount()
+    {
+        _currentCount++;
+    }
+
+    private void ResetCount()
+    {
+        _currentCount = 0;
+    }
+}

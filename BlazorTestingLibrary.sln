@@ -2,6 +2,12 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorTestingLibrary", "BlazorTestingLibrary\BlazorTestingLibrary.csproj", "{50748DC2-CA0F-4151-AF8E-0D4D61D7A6E2}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ExampleUsage", "ExampleUsage", "{668942EE-3756-4036-9979-5CD1874F0D24}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorProject", "ExampleUsage\BlazorProject\BlazorProject.csproj", "{2B39486E-11FF-4045-9B92-6F93D43133DA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorProject.UnitTests", "ExampleUsage\BlazorProject.UnitTests\BlazorProject.UnitTests.csproj", "{99E31B2D-574B-4442-8BD1-D2ACC4B448B5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +18,17 @@ Global
 		{50748DC2-CA0F-4151-AF8E-0D4D61D7A6E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{50748DC2-CA0F-4151-AF8E-0D4D61D7A6E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{50748DC2-CA0F-4151-AF8E-0D4D61D7A6E2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2B39486E-11FF-4045-9B92-6F93D43133DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2B39486E-11FF-4045-9B92-6F93D43133DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2B39486E-11FF-4045-9B92-6F93D43133DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2B39486E-11FF-4045-9B92-6F93D43133DA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{99E31B2D-574B-4442-8BD1-D2ACC4B448B5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{99E31B2D-574B-4442-8BD1-D2ACC4B448B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{99E31B2D-574B-4442-8BD1-D2ACC4B448B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{99E31B2D-574B-4442-8BD1-D2ACC4B448B5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{2B39486E-11FF-4045-9B92-6F93D43133DA} = {668942EE-3756-4036-9979-5CD1874F0D24}
+		{99E31B2D-574B-4442-8BD1-D2ACC4B448B5} = {668942EE-3756-4036-9979-5CD1874F0D24}
 	EndGlobalSection
 EndGlobal
